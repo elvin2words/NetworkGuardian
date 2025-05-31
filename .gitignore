@@ -11,3 +11,10 @@ notes.md
 run.md
 steps.md
 attached_assets
+
+# Ignore all Markdown files
+# Ignore all .md files in all directories
+**/*.md
+
+# But do NOT ignore these specific ones
+!README.md
