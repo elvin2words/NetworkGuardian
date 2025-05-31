@@ -8,6 +8,6 @@ vite.config.ts.*
 .desFlow
 .nodejs
 .notes
-.run
-.steps
+run
+steps
 attached_assets
