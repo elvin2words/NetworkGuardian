@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --background: 210 11% 98%; /* #F8FAFC */
+  --foreground: 222 84% 5%; /* #0F172A */
+  --muted: 210 40% 96%; /* #F1F5F9 */
+  --muted-foreground: 215 16% 47%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 84% 5%; /* #0F172A */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 84% 5%; /* #0F172A */
+  --border: 214 32% 91%; /* #E2E8F0 */
+  --input: 214 32% 91%; /* #E2E8F0 */
+  --primary: 217 91% 60%; /* #2563EB */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 210 40% 96%; /* #F1F5F9 */
+  --secondary-foreground: 222 47% 11%; /* #1E293B */
+  --accent: 210 40% 96%; /* #F1F5F9 */
+  --accent-foreground: 222 47% 11%; /* #1E293B */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 217 91% 60%; /* #2563EB */
+  --radius: 0.5rem;
+
+  --sidebar-background: 0 0% 100%; /* #FFFFFF */
+  --sidebar-foreground: 222 84% 5%; /* #0F172A */
+  --sidebar-primary: 217 91% 60%; /* #2563EB */
+  --sidebar-primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --sidebar-accent: 210 40% 96%; /* #F1F5F9 */
+  --sidebar-accent-foreground: 222 47% 11%; /* #1E293B */
+  --sidebar-border: 214 32% 91%; /* #E2E8F0 */
+  --sidebar-ring: 217 91% 60%; /* #2563EB */
+
+  --chart-1: 12 76% 61%; /* #E11D48 */
+  --chart-2: 173 58% 39%; /* #0891B2 */
+  --chart-3: 197 37% 24%; /* #164E63 */
+  --chart-4: 43 74% 66%; /* #EAB308 */
+  --chart-5: 27 87% 67%; /* #F97316 */
+}
+
+.dark {
+  --background: 222 84% 5%; /* #0F172A */
+  --foreground: 210 40% 98%; /* #F8FAFC */
+  --muted: 217 33% 17%; /* #1E293B */
+  --muted-foreground: 215 20% 65%; /* #94A3B8 */
+  --popover: 222 84% 5%; /* #0F172A */
+  --popover-foreground: 210 40% 98%; /* #F8FAFC */
+  --card: 222 84% 5%; /* #0F172A */
+  --card-foreground: 210 40% 98%; /* #F8FAFC */
+  --border: 217 33% 17%; /* #1E293B */
+  --input: 217 33% 17%; /* #1E293B */
+  --primary: 217 91% 60%; /* #2563EB */
+  --primary-foreground: 222 84% 5%; /* #0F172A */
+  --secondary: 217 33% 17%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F8FAFC */
+  --accent: 217 33% 17%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --destructive: 0 62% 30%; /* #DC2626 */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 217 91% 60%; /* #2563EB */
+
+  --sidebar-background: 222 84% 5%; /* #0F172A */
+  --sidebar-foreground: 210 40% 98%; /* #F8FAFC */
+  --sidebar-primary: 217 91% 60%; /* #2563EB */
+  --sidebar-primary-foreground: 222 84% 5%; /* #0F172A */
+  --sidebar-accent: 217 33% 17%; /* #1E293B */
+  --sidebar-accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --sidebar-border: 217 33% 17%; /* #1E293B */
+  --sidebar-ring: 217 91% 60%; /* #2563EB */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Animation classes */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
